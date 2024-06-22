@@ -183,9 +183,6 @@ app.post("/webhook", async (req, res) => {
     agent.handleRequest(intentMap);
 });
 
-// Firebase Cloud Function
-exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
-
 // Express server listen
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
